@@ -21,7 +21,7 @@ const Planning = ({ planning }: { planning: boolean }) => {
   }, [slider]);
 
   return (
-    <div id="planning" style={{ display: planning ? "block" : "none" }}>
+    <div style={{ display: planning ? "block" : "none" }}>
       <div>
         <div className="planningTitle">
           <h2
@@ -49,7 +49,7 @@ const Planning = ({ planning }: { planning: boolean }) => {
             alt="nous lol"
             title="beast"
           />
-          <div>
+          <div id="planning">
             <h3>{addresse}</h3>
             <h3>{ville}</h3>
             <h3>{horaire}</h3>
