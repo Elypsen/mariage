@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <>
-      <NavBar setHistoire={setHistoire} setPlanning={setPlanning} />
+      <NavBar histoire={histoire} planning={planning} setHistoire={setHistoire} setPlanning={setPlanning} />
       <VotreHistoire histoire={histoire} />
       <Planning planning={planning} />
       <Footer/>

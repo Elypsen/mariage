@@ -10,6 +10,7 @@ body {
   justify-content: center;
   top: 0;
   align-items: center;
+
   min-width: 100vw;
 }
 
@@ -42,6 +43,24 @@ body {
   flex-flow: row nowrap;
   justify-content: space-around;
   width: 100vw;
+  text-align: center;
+  line-height: 10vh;
+}
+h2{
+  cursor: pointer;
+}
+.titleActive{
+  text-decoration: underline;
+}
+.titleInactive{
+  text-decoration:none;
+}
+.planningTitle{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  font-size:2rem;
+  text-align: center;
 }
 
 .photobulle {

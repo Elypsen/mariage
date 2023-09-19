@@ -1,59 +1,65 @@
 import euxlol from "../assets/images/euxlol.jpg";
 import noulol from "../assets/images/noulol.jpg";
+import { useEffect, useState } from "react";
 
 const Planning = ({ planning }: { planning: boolean }) => {
+  const [slider, setSlider] = useState<string>("mairie");
+  const [addresse, setAddresse] = useState<string>();
+  const [ville, setVille] = useState<string>();
+  const [horaire, setHoraire] = useState<string>();
+
+  useEffect(() => {
+    if (slider === "mairie") {
+      setAddresse("Mairie de sussargues");
+      setVille("34669 Sussargues");
+      setHoraire("15h30 16/09/2024");
+    } else if (slider === "laique") {
+      setAddresse("manade de chai pas ou");
+      setVille("jregardais pas la route quand on y est aller");
+      setHoraire("pas trop longtemps apres la mairie");
+    }
+  }, [slider]);
+
   return (
     <div id="planning" style={{ display: planning ? "block" : "none" }}>
-      <div className="planning">
-        <div>
-          <div style={{ textAlign: "center" }}>
-            <h3 style={{ textDecoration: "underline", fontSize: "2rem" }}>
-              Mairie
-            </h3>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexFlow: "row",
-              justifyContent: "space-around",
-              width: "70vw",
+      <div>
+        <div className="planningTitle">
+          <h2
+            className={slider === "mairie" ? "titleActive" : "titleInactive"}
+            onClick={() => {
+              setSlider("mairie");
             }}
           >
-            <div>
-              <h3>Sussargues</h3>
-              <h3>horaire</h3>
-            </div>
-            <div>
-              <h3>adresse mairie</h3>
-            </div>
-          </div>
+            Mairie
+          </h2>
+          <h2
+            className={slider === "laique" ? "titleActive" : "titleInactive"}
+            onClick={() => {
+              setSlider("laique");
+            }}
+          >
+            Cérémonie laique
+          </h2>
         </div>
-        <img src={euxlol} className="photobulle" alt="nous lol" title="sexy" />
-      </div>
-      <div className="planning">
-        <img src={noulol} className="photobulle" alt="nous lol" title="beast" />
-        <div>
-          <div style={{ textAlign: "center" }}>
-            <h3 style={{ textDecoration: "underline", fontSize: "2rem" }}>
-              Cérémonie laique
-            </h3>
+
+        <div className="planning">
+          <img
+            src={noulol}
+            className="photobulle"
+            alt="nous lol"
+            title="beast"
+          />
+          <div>
+            <h3>{addresse}</h3>
+            <h3>{ville}</h3>
+            <h3>{horaire}</h3>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexFlow: "row",
-              justifyContent: "space-around",
-              width: "70vw",
-            }}
-          >
-            <div>
-              <h3>Sussargues</h3>
-              <h3>horaire</h3>
-            </div>
-            <div>
-              <h3>adresse mairie</h3>
-            </div>
-          </div>
+          <img
+            src={euxlol}
+            className="photobulle"
+            alt="nous lol"
+            title="sexy"
+          />
         </div>
       </div>
     </div>
