@@ -1,5 +1,5 @@
 body {
-  background-image: url("./assets/images/background.jpg");
+  background-image: url("./assets/images/background2.jpg");
   background-size: cover;
 }
 
@@ -19,6 +19,7 @@ body {
   text-align: center;
   min-width:100vw;
 }
+
 #histoire {
   margin-left:1vw;
   display: flex;
@@ -33,6 +34,7 @@ body {
 }
 
 #planning {
+
 }
 
 .planning {

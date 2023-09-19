@@ -1,34 +1,42 @@
+@font-face {
+  font-family: "Darleston";
+  src: url("./assets/fonts/Darleston.otf") format("opentype");
+}
+
 :root {
-  font-family: cursive;
+  font-family: "Darleston", sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-
-
-color:rgb(151, 125, 90);  
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgb(151, 125, 90);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
- 
+}
+
+h3{
+  font-weight: bolder;
+  font-size:1.3rem;
+  margin:0;
 }
 
 a {
   font-size: 2rem;
   font-weight: 1000;
-
+  color: inherit;
   text-decoration: inherit;
   cursor: pointer;
-  transition:200ms;
+  transition: 200ms;
 }
 
 a:hover {
   transform: scale(1.5) perspective(1);
-  font-size:3rem;
-
+  font-size: 3rem;
 }
-a:visited{
-  color:rgb(151, 125, 90);
+a:visited {
+  color: rgb(151, 125, 90);
 }
 
 body {
@@ -41,9 +49,8 @@ body {
 
 h1 {
   font-size: 4em;
-  margin:5vh 10vw;
+  margin: 5vh 10vw;
   line-height: 1.1;
-
 }
 
 button {
@@ -65,12 +72,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-
 @keyframes spin {
   from {
-      transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform:rotate(360deg);
+    transform: rotate(360deg);
   }
 }
