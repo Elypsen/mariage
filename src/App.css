@@ -14,6 +14,17 @@ body {
   min-width: 100vw;
 }
 
+#allyDam{
+  margin:0;
+  width:fit-content;
+
+}
+.aTitle{
+  display:flex;
+  justify-content: center;
+  width: 25vw;
+  height: max-content;
+}
 #footer {
   position:fixed;
   bottom:0;

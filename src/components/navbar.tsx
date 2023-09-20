@@ -13,27 +13,31 @@ const NavBar = ({
 }) => {
   return (
     <div id="navbar">
-      <a
-        className={histoire ? "titleActive" : "titleInactive"}
-        onClick={() => {
-          setPlanning(false);
-          setHistoire(true);
-        }}
-      >
-        Notre Histoire
-      </a>
-
-      <h1>Allyson & Damien</h1>
-
-      <a
-       className={planning ? "titleActive" : "titleInactive"}
-        onClick={() => {
-          setPlanning(true);
-          setHistoire(false);
-        }}
-      >
-        Evenement
-      </a>
+      <div className="aTitle">
+        <a
+          className={histoire ? "titleActive" : "titleInactive"}
+          onClick={() => {
+            setPlanning(false);
+            setHistoire(true);
+          }}
+        >
+          Notre Histoire
+        </a>
+      </div>
+      <div>
+        <h1 id="allyDam">Allyson & Damien</h1>
+      </div>
+      <div className="aTitle">
+        <a
+          className={planning ? "titleActive" : "titleInactive"}
+          onClick={() => {
+            setPlanning(true);
+            setHistoire(false);
+          }}
+        >
+          Evenement
+        </a>
+      </div>
     </div>
   );
 };

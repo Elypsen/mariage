@@ -32,9 +32,9 @@ a {
 }
 
 a:hover {
-  transform: scale(1.5) perspective(1);
-  font-size: 3rem;
+  scale:150%;
 }
+
 a:visited {
   color: rgb(151, 125, 90);
 }
